@@ -15,13 +15,15 @@ namespace grade_calculator
         {
             //variable declaration
             string studentName = "Adam";
-            int[] grades = new int[] { 100, 92, 87, 200, -20, 52, 82, 75, 67, 88 };
-            double average = 0.0;
+            int[] grades = new int[] { 100, 92, 87, 200, -20, 52, 82, 75, 67, 88 }; //I could use int[10], but that doesn't allow for expansion.
+            float average = 0; //needs to be 0 to add grade #s to it
 
+            //begin code
             Console.WriteLine("Hey there, " +  studentName + "!");
             Console.WriteLine("Here are your grades:");
             Console.WriteLine(""); // empty WriteLines like this are for spacing
 
+            //grade lettering loop
             foreach (var grade in grades)
             {
                 if(grade >= 90 && grade <= 100) 
@@ -64,12 +66,14 @@ namespace grade_calculator
                     Console.WriteLine("");
                 }
 
-                average += grade;
+                average += grade; //add to average
             }
 
             Console.WriteLine("");
-            average = average / grades.Length;
+            average = average / grades.Length; //averaging
             Console.WriteLine("here is the average: " + average);
+
+            //BONUS LOOP: letter for the average
             if (average >= 90 && average <= 100)
             {
                 Console.WriteLine("Great, you got an A!");

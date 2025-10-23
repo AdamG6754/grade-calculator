@@ -5,6 +5,8 @@
  */
 
 
+using System.Diagnostics;
+
 namespace grade_calculator
 {
     internal class Program
@@ -68,6 +70,46 @@ namespace grade_calculator
             Console.WriteLine("");
             average = average / grades.Length;
             Console.WriteLine("here is the average: " + average);
+            if (average >= 90 && average <= 100)
+            {
+                Console.WriteLine("Great, you got an A!");
+                if (average == 100)
+                {
+                    Console.WriteLine("(WHOAH!!! Perfect score!)");
+                }
+                Console.WriteLine("");
+            }
+
+            if (average >= 80 && average <= 89)
+            {
+                Console.WriteLine("Nice, you got a B.");
+                Console.WriteLine("");
+            }
+
+            if (average >= 70 && average <= 79)
+            {
+                Console.WriteLine("Good, you got a C.");
+                Console.WriteLine("");
+            }
+
+            if (average >= 65 && average <= 69)
+            {
+                Console.WriteLine("Good effort, you got a D.");
+                Console.WriteLine("");
+            }
+
+            if (average >= 0 && average <= 64)
+            {
+                Console.WriteLine("Oh man, you got an F...");
+                Console.WriteLine("");
+            }
+
+            if (average < 0 || average > 100)
+            {
+                Console.WriteLine("Huh?! That's not a grade that's supposed to happen...");
+                Console.WriteLine("");
+            }
+
             Console.WriteLine("That's all the grades, end program.");
         }
     }

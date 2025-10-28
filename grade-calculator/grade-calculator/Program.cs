@@ -67,6 +67,7 @@ namespace grade_calculator
                 }
 
                 average += grade; //add to average
+                Console.Write("(" + grade + ") ");
             }
 
             Console.WriteLine("");
